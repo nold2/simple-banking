@@ -12,12 +12,6 @@ class Database:
 
         self.cur.execute(
             f"""
-                DROP TABLE {self.TABLE_NAME};
-            """
-        )
-
-        self.cur.execute(
-            f"""
             CREATE TABLE IF NOT EXISTS {self.TABLE_NAME} (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 number TEXT,
@@ -368,4 +362,4 @@ def main():
             exit()
 
 
-# main()
+main()
